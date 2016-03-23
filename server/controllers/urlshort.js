@@ -50,6 +50,28 @@ exports.make_short = function( req, res ){
 };
 
 
+
+//get long url by short id
+exports.decode_short = function( req, res ){
+	var base58 = req.params.shortId || '';
+	var urlId = decodeBase58( base58 );
+
+	ShortUrl.findOne( { _id: urlId } ).exec( function( err, data ){
+		if( err ){
+			console.log( err );
+			return res.status( 500 ).json( { error: 'Cannot get long url!' } );
+		}
+
+		if( data ){
+			return res.redirect( data.longUrl );
+		}else{
+			return res.redirect( config.hostname );
+		}
+
+	} );
+};
+
+
 /*
 Convert base 10 integer to base58 string
 */

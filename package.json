@@ -5,13 +5,14 @@
   "year": "2016",
   "license": "GPL-3.0",
   "dependencies": {
-    "express": "latest",
-    "mongoose": "latest",
     "body-parser": "latest",
-    "lodash": "latest",
     "consolidate": "latest",
+    "express": "latest",
+    "lodash": "latest",
+    "mongoose": "latest",
+    "mongoose-auto-increment": "^5.0.1",
     "swig": "latest",
-    "mongoose-auto-increment": "^5.0.1"
+    "url": "^0.11.0"
   },
   "description": "UrlShortener",
   "main": "app.js",

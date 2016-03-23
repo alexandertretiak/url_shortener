@@ -29,6 +29,9 @@ var ShortController = require( __dirname + '/server/controllers/urlshort.js' );
 	//create short link
 	app.post( '/api/shorty', ShortController.make_short );
 
+	//decode short url
+	app.get( '/:shortId', ShortController.decode_short );
+
 	//-----------------
 	app.listen( config.port );
 	console.log( 'app startted on port ' + config.port );
