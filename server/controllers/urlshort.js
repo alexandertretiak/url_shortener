@@ -29,7 +29,7 @@ exports.make_short = function( req, res ){
 		
 		if( data ){
 			//encode founded url
-			short_url = config.hostname + '/' + encodeBase58( data._id );
+			short_url = config.hostname + ':' + config.port + '/' + encodeBase58( data._id );
 			return res.send( { short_url: short_url } );
 		}else{	
 			sh = new ShortUrl( { longUrl: long_url } );
@@ -40,7 +40,7 @@ exports.make_short = function( req, res ){
 					return res.status( 500 ).json( { error: 'Cannot create short url!' } );
 				}
 				//encode new url
-				short_url = config.hostname + '/' + encodeBase58( sh._id );
+				short_url = config.hostname + ':' + config.port + '/' + encodeBase58( sh._id );
 
 				res.send( { short_url: short_url } );
 			} );
@@ -65,7 +65,7 @@ exports.decode_short = function( req, res ){
 		if( data ){
 			return res.redirect( data.longUrl );
 		}else{
-			return res.redirect( config.hostname );
+			return res.redirect( config.hostname + ':' + config.port );
 		}
 
 	} );

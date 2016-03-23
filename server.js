@@ -18,9 +18,6 @@ var ShortController = require( __dirname + '/server/controllers/urlshort.js' );
 	app.use( bodyParser.urlencoded( { extended: true } ) );
 	app.use( bodyParser.json( { limit: '100kb' } ) );
 
-	//app.engine( 'html', consolidate[config.templateEngine] );
-	//app.set( 'view engine', 'html' );
-
 	//simple routes
 	app.get( '/', function( req, res ){
 		res.redirect( '/index.html' );
