@@ -1,0 +1,28 @@
+<div data-ng-controller="UrlMainController">
+	<form name="shortUrlForm" data-ng-submit="makeShort(shortUrlForm.$valid)" role="form" class="form-horizontal">
+		<div class="row">
+			<div class="col-md-2 col-md-offset-5">
+				<label>Enter Long Url</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-2">
+				<input type="text" class="form-control" id="long_url" data-ng-model="long_url" name="long_url" placeholder="Long URL" required />
+			</div>
+			<div class="col-md2">
+				<button type="submit" class="btn btn-info">Make Short</button>
+			</div>
+		</div>
+	</form>
+	<hr>
+	<div class="row">
+		<div class="col-md-2 col-md-offset-5">
+			<label>Maked Url</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-7 col-md-offset-2">
+			<input type="text" class="form-control" id="short_url" data-ng-model="short_url" name="short_url" placeholder="Short URL" />
+		</div>
+	</div>
+</div>

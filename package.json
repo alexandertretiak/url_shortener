@@ -1,0 +1,25 @@
+{
+  "name": "shortener",
+  "version": "0.0.1",
+  "author": "SuN",
+  "year": "2016",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "express": "latest",
+    "mongoose": "latest",
+    "body-parser": "latest",
+    "lodash": "latest",
+    "consolidate": "latest",
+    "swig": "latest",
+    "mongoose-auto-increment": "^5.0.1"
+  },
+  "description": "UrlShortener",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "keywords": [
+    "url",
+    "shortener"
+  ]
+}
